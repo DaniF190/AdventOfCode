@@ -1,6 +1,7 @@
 package org.example
 
 import org.example.days.DayOne
+import org.example.days.DayThree
 import org.example.days.DayTwo
 import org.example.utils.AOCUtils
 
@@ -14,7 +15,12 @@ fun main() {
     //println(DayOne.part2(src))
 
     //Day Two
-    val src = AOCUtils.getFileContent(2)
-    println(DayTwo.part1(src!!))
-    println(DayTwo.part2(src))
+    //val src = AOCUtils.getFileContent(2)
+    //println(DayTwo.part1(src!!))
+    //println(DayTwo.part2(src))
+
+    //Day Three
+    val src = AOCUtils.getFileContent(3)
+    println(DayThree.part1(src!!))
+    println(DayThree.part2(src))
 }
