@@ -1,16 +1,17 @@
-package org.example.days
+package org.example.years.year2024
 
+import org.example.years.DayI
 import kotlin.math.abs
 
-object DayTwo {
-    fun part1(input: String): Int {
+object DayTwo : DayI {
+    override fun part1(input: String): Int {
         return input.trimIndent().lines().count { line ->
             val numbersArray = line.trim().split(Regex("\\s+")).map { it.toInt() }
             safeDecisionHelper(numbersArray)
         }
     }
 
-    fun part2(input: String): Int {
+    override fun part2(input: String): Int {
         return input.trimIndent().lines().count { line ->
             val numbersArray = line.trim().split(Regex("\\s+")).map { it.toInt() }
             safeDecisionHelper(numbersArray) || numbersArray.indices.map { safeDecisionHelper(numbersArray.filterIndexed { index, _ -> index != it }) }.count { it -> it } > 0

@@ -1,9 +1,10 @@
-package org.example.days
+package org.example.years.year2024
 
+import org.example.years.DayI
 import kotlin.math.abs
 
-object DayOne {
-    fun part1(input: String): Int {
+object DayOne : DayI {
+    override fun part1(input: String): Int {
         return input.trimIndent().lines().map { line ->
            val (first, second) = line.trim().split(Regex("\\s+")).map { it.toInt() }
             first to second
@@ -12,7 +13,7 @@ object DayOne {
         }
     }
 
-    fun part2(input: String): Int {
+    override fun part2(input: String): Int {
         return input.trimIndent().lines().map { line ->
             val (first, second) = line.trim().split(Regex("\\s+")).map { it.toInt() }
             first to second
