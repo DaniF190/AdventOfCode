@@ -3,7 +3,7 @@ package org.example.years.year2024
 import org.example.years.DayI
 
 object Day4 : DayI {
-    override fun part1(input: String): Int {
+    override fun part1(input: String): Long {
         var sumOfWord = 0
         val trimmedInput = input.lines()
         /*sumOfWord += "XMAS|SAMX".toRegex().findAll(input.replace("\n", "")).count()
@@ -25,10 +25,10 @@ object Day4 : DayI {
             }
         }
 
-        return sumOfWord
+        return sumOfWord.toLong()
     }
 
-    override fun part2(input: String): Int {
+    override fun part2(input: String): Long {
         var sumOfWord = 0
         val trimmedInput = input.lines()
 
@@ -51,7 +51,7 @@ object Day4 : DayI {
             }
         }
 
-        return sumOfWord
+        return sumOfWord.toLong()
     }
 
     private fun recursiveSearch(input: List<String>, currentIndex: Pair<Int, Int>, directIndex: Pair<Int, Int>, remainingWord: String) : Int {

@@ -5,7 +5,7 @@ import org.example.years.DayI
 import org.example.years.YearI
 
 class Year2024 (
-    private val dayList: List<DayI> = listOf(DayOne, DayTwo, DayThree, Day4, Day5),
+    private val dayList: List<DayI> = listOf(DayOne, DayTwo, DayThree, Day4, Day5, Day6, Day7),
 ) : YearI {
     override fun runYear() {
         dayList.forEach { day ->

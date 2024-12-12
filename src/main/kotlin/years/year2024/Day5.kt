@@ -3,7 +3,7 @@ package org.example.years.year2024
 import org.example.years.DayI
 
 object Day5 : DayI {
-    override fun part1(input: String): Int {
+    override fun part1(input: String): Long{
 
         val ruleList = input.lines().subList(0, input.lines().indexOf("") - 1).map { rule ->
             val (first, second) = rule.split("|").map { it.toInt() }
@@ -18,10 +18,10 @@ object Day5 : DayI {
                 if (rule.first in line && rule.second in line && line.indexOf(rule.second) < line.indexOf(rule.first)) isValid = false
             }
             if (isValid) line[line.size / 2] else 0
-        }
+        }.toLong()
     }
 
-    override fun part2(input: String): Int {
+    override fun part2(input: String): Long {
 
         val ruleList = input.lines().subList(0, input.lines().indexOf("") - 1).map { rule ->
             val (first, second) = rule.split("|").map { it.toInt() }
@@ -47,7 +47,6 @@ object Day5 : DayI {
                             val num = sortedList[i]
                             sortedList[i] = sortedList[j]
                             sortedList[j] = num
-                            i = 0
                             bolValue = true
                             break
                         }
@@ -60,6 +59,6 @@ object Day5 : DayI {
                 sumValue = sortedList[sortedList.size / 2]
             }
             sumValue
-        }
+        }.toLong()
     }
 }
