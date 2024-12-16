@@ -1,6 +1,7 @@
 package org.example.years.year2024
 
 import org.example.years.DayI
+import java.math.BigInteger
 
 object Day7 : DayI {
 
@@ -33,8 +34,6 @@ object Day7 : DayI {
 
         if (sum < numbers[0]) return 0
         if (numbers.size < 2) { return if (sum == numbers[0]) 1 else 0 }
-
-        println((numbers[0].toString() + numbers[1].toString()))
 
         return recursiveCalc(sum, numbers.drop(2).toMutableList().also { it.addFirst(numbers[0] + numbers[1]) }) +
                 recursiveCalc(sum, numbers.drop(2).toMutableList().also { it.addFirst(numbers[0] * numbers[1]) }) +
